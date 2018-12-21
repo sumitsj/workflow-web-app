@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     {% assets "css_all" %}
-        <link type="text/css" href="{{ ASSET_URL }}" rel="stylesheet">
+    <link type="text/css" href="{{ ASSET_URL }}" rel="stylesheet">
     {% endassets %}
     <link rel="icon" type="images/png" href="/static/images/favicon.png">
 </head>
@@ -23,8 +23,13 @@
 {% include 'navigation.html' %}
 <!--Main Navigation-->
 
+<!-- Loader -->
+<div class="progress" id="loader">
+    <div class="indeterminate"></div>
+</div>
+
 <!--Main layout-->
-<main>
+<main id="main">
     <div class="container">
         <!-- Page Content goes here -->
         {% block content %}{% endblock %}

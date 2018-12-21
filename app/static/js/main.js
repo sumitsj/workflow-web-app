@@ -1,6 +1,5 @@
 $(document).ready(function(){
-//    $('.sidenav').sidenav();
-//    $('.dropdown-trigger').dropdown();
     M.AutoInit();
+    $('#loader').hide();
     M.toast({html: 'This website is under construction.'})
 });

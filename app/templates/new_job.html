@@ -1,57 +1,67 @@
-<div class="row">
-    <div class="col s12">
-        <div style="padding: 35px;" align="center" class="card">
-            <div class="row">
-                <div class="left card-title">
-                    <b>New Job</b>
+<form class="card" method="post">
+    <div class="card-content">
+        <span class="card-title">
+            <b>New Job</b>
+        </span>
+        <div style="height: 400px; overflow: auto;">
+            <div>
+                <div class="input-field">
+                    <input id="job_name" type="text" class="validate">
+                    <label for="job_name">Job Name</label>
                 </div>
-            </div>
 
-            <div class="row">
-                <form class="col s12 card-content">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="job_name" type="text" class="validate">
-                            <label for="job_name">Job Name</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="job_type" type="text" class="validate">
-                            <label for="job_type">Type</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <textarea id="job_details" class="materialize-textarea validate"></textarea>
-                            <label for="job_details">Details</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="created_by" type="text" class="validate">
-                            <label for="created_by">Created By</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="created_on" type="text" class="datepicker validate">
-                            <label for="created_on">Created On</label>
-                        </div>
-                    </div>
+                <div class="input-field">
+                    <input id="job_type" type="text" class="validate">
+                    <label for="job_type">Type</label>
+                </div>
 
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <button class="btn" type="button" name="cancel">Clear
-                            </button>
-                        </div>
-                        <div class="input-field col s6">
-                            <button class="btn" type="submit" name="submit">Create
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                <div class="input-field">
+                    <textarea id="job_details" class="materialize-textarea validate"></textarea>
+                    <label for="job_details">Details</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="created_by" type="text" class="validate">
+                    <label for="created_by">Created By</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="created_on" type="text" class="datepicker validate">
+                    <label for="created_on">Created On</label>
+                </div>
+
+                <div class="input-field">
+                    <select id="single_select" name="single_select" class="validate">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="ss1">Option 1</option>
+                        <option value="ss2">Option 2</option>
+                        <option value="ss3">Option 3</option>
+                    </select>
+                    <label for="single_select">Single Select</label>
+                </div>
+
+                <div class="input-field">
+                    <select multiple id="multiple_select" name="multiple_select" class="validate">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="ms1">Option 1</option>
+                        <option value="ms2">Option 2</option>
+                        <option value="ms3">Option 3</option>
+                    </select>
+                    <label for="multiple_select">Multiple Select</label>
+                </div>
+
+                <div class="input-field">
+                    <label>
+                        <input type="checkbox" name="auto_run" class="filled-in" checked="checked"/>
+                        <span>Auto start on creation</span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="card-action">
+        <button class="btn waves-effect" type="submit" name="submit">Create</button>
+        <button class="btn waves-effect" type="button" name="cancel">Clear</button>
+    </div>
+</form>
