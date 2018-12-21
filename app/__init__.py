@@ -1,6 +1,6 @@
 import os
 from flask import Flask
-from app import health, workflow
+from app import health, workflow, auth
 from flask_assets import Environment, Bundle
 
 from .database import db
@@ -18,6 +18,7 @@ def create():
     # apply blueprints to the app
     app.register_blueprint(health.blueprint)
     app.register_blueprint(workflow.blueprint)
+    app.register_blueprint(auth.blueprint)
 
     # register error handlers
     app.register_error_handler(400, handle_bad_request)

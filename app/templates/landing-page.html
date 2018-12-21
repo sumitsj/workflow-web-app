@@ -1,12 +1,56 @@
 {% extends "main-layout.html" %}
 
 {% block content %}
+
+{% if is_authenticated %}
+<div class="row" style="padding-top: 20px;">
+    <div class="col s12 m6">
+        {% include 'list.html' %}
+    </div>
+    <div class="col s12 m6">
+        {% include 'new_job.html' %}
+    </div>
+</div>
+<div class="fixed-action-btn click-to-toggle" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large pink waves-effect waves-light">
+        <i class="large material-icons">add</i>
+    </a>
+
+    <ul>
+        <li>
+            <a class="btn-floating red"><i class="material-icons">note_add</i></a>
+            <a href="" class="btn-floating fab-tip">Add a note</a>
+        </li>
+
+        <li>
+            <a class="btn-floating yellow darken-1"><i class="material-icons">add_a_photo</i></a>
+            <a href="" class="btn-floating fab-tip">Add a photo</a>
+        </li>
+
+        <li>
+            <a class="btn-floating green"><i class="material-icons">alarm_add</i></a>
+            <a href="" class="btn-floating fab-tip">Add an alarm</a>
+        </li>
+
+        <li>
+            <a class="btn-floating blue"><i class="material-icons">vpn_key</i></a>
+            <a href="" class="btn-floating fab-tip">Add a master password</a>
+        </li>
+    </ul>
+</div>
+{% endif %}
+
+{% if not is_authenticated %}
 <div class="row">
     <div class="col s12">
         <div class="jumbotron">
             <h1>Workflow</h1>
-            <blockquote>Generic workflow management - Configure job, its attributes, states, processes and user permissions.</blockquote>
+            <blockquote>Generic workflow management - Configure job, its attributes, states, processes and user
+                permissions.
+            </blockquote>
         </div>
     </div>
 </div>
+{% endif %}
+
 {% endblock %}
