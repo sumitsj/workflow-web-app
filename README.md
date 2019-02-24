@@ -2,7 +2,7 @@
 
 ## Getting started
 ```bash
-$ git clone git@github.com:sumitsj/workflow.git
+$ git clone git@github.com:sumitsj/workflow-web-app.git
 $ cd workflow
 ```
 
