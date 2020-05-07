@@ -9,4 +9,4 @@ jsmin==2.2.2
 MarkupSafe==1.1.0
 SQLAlchemy==1.2.15
 webassets==0.12.1
-Werkzeug==0.14.1
+Werkzeug==0.15.3
